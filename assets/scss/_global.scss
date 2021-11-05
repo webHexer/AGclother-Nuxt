@@ -1,0 +1,97 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $gray;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.3;
+  // overflow-x: hidden;
+
+  // ::selection {
+  //   color: $white;
+  //   background-color: $darkGray;
+  // }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 1.1rem;
+
+  @include breakpoint-up(38.75em) {
+    font-size: 1.5rem;
+  }
+
+  @include breakpoint-up(60em) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 1.28rem;
+
+  @include breakpoint-up(38.75em) {
+    font-size: 1.39rem;
+  }
+
+  @include breakpoint-up(60em) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 0.9rem;
+
+  @include breakpoint-up(38.75em) {
+    font-size: 1.09rem;
+  }
+
+  @include breakpoint-up(60em) {
+    font-size: 1.145rem;
+  }
+}
+
+p {
+  font-size: 0.7rem;
+
+  @include breakpoint-up(38.75em) {
+    font-size: 0.85rem;
+  }
+
+  @include breakpoint-up(60em) {
+    font-size: 1rem;
+  }
+}
+
+.hide-in-mobile {
+  @include breakpoint-down(51em) {
+    display: none;
+  }
+}
+
+.hide-in-desktop {
+  @include breakpoint-up(51em) {
+    display: none;
+  }
+}
