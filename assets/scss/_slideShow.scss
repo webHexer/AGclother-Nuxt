@@ -1,0 +1,74 @@
+.slide-show {
+  &__section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 1.5em 0.5em;
+    padding: 0.3em;
+    text-align: center;
+    cursor: pointer;
+
+    @include container;
+
+    h2 {
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  &__section-images {
+    position: relative;
+    
+    div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include container;
+  }
+
+  &__section-image {
+    flex: 1 1 30%;
+    width: 100%;
+    height: 18.75em;
+    margin: 0.4em;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    @include breakpoint-up(31.25em) {
+      height: 35em;
+    }
+  }
+
+  &__buttons {
+    display: none;
+    
+    @include breakpoint-up(28.4375em) {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      color: $white;
+      font-size: 2rem;
+      font-weight: 500;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    @include breakpoint-up(60em) {
+      font-size: 2.875rem;
+    }
+  }
+}

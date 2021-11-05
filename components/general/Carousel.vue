@@ -54,7 +54,7 @@ export default {
         } else if (data.active && index === carouselImages.length - 1) {
           carouselImages[index].active = false
           carouselImages[0].active = true
-          return true
+          return false
         }
         return true
       })
@@ -72,7 +72,7 @@ export default {
         } else if (data.active && index === 0) {
           carouselImages[index].active = false
           carouselImages[carouselImages.length - 1].active = true
-          return true
+          return false
         }
         return true
       })

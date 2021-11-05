@@ -1,4 +1,4 @@
-.deals-of-the-day {
+.browse-clothes {
   &__section-header {
     display: flex;
     flex-direction: column;
@@ -31,14 +31,27 @@
     flex: 1 1 100%;
     margin: 0.4em 0;
 
+    &:last-child {
+      display: none;
+    }
+
     @include breakpoint-up(27.5em) {
       flex: 1 1 45%;
       margin: 0.5em 0.5em;
     }
 
+    @include breakpoint-up(46.875em) {
+      flex: 1 1 18%;
+      margin: 0.5em 0.5em;
+    }
+
     @include breakpoint-up(53.125em) {
-      flex: 1 1 21%;
+      flex: 1 1 16%;
       margin: 0 0.8em;
+
+      &:last-child {
+        display: block;
+      }
     }
 
     img {

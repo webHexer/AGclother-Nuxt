@@ -33,6 +33,51 @@ export default {
       .then((response) =>
         context.store.dispatch('home/setMensWearSectionData', response)
       )
+
+    // women's wear section data
+    await fetch(
+      'https://agclother-nuxt-default-rtdb.firebaseio.com/womenWearData.json'
+    )
+      .then((res) => res.json())
+      .then((response) =>
+        context.store.dispatch('home/setWomensWearSectionData', response)
+      )
+
+    // kids wear section data
+    await fetch(
+      'https://agclother-nuxt-default-rtdb.firebaseio.com/kidsWearData.json'
+    )
+      .then((res) => res.json())
+      .then((response) =>
+        context.store.dispatch('home/setKidsWearSectionData', response)
+      )
+
+    // footwear section data
+    await fetch(
+      'https://agclother-nuxt-default-rtdb.firebaseio.com/footWearData.json'
+    )
+      .then((res) => res.json())
+      .then((response) =>
+        context.store.dispatch('home/setFootwearSectionData', response)
+      )
+
+    // beauty section data
+    await fetch(
+      'https://agclother-nuxt-default-rtdb.firebaseio.com/trendingStylesData.json'
+    )
+      .then((res) => res.json())
+      .then((response) =>
+        context.store.dispatch('home/setTrendingStyleSectionData', response)
+      )
+
+    // beauty section data
+    await fetch(
+      'https://agclother-nuxt-default-rtdb.firebaseio.com/beautySectionData.json'
+    )
+      .then((res) => res.json())
+      .then((response) =>
+        context.store.dispatch('home/setBeautySectionData', response)
+      )
   },
 }
 </script>
