@@ -44,12 +44,14 @@
       :no-of-images="'5'"
       :show-details="true"
     />
+    <Footer />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Header from '@/components/header/Header.vue'
+import Footer from '@/components/footer/Footer.vue'
 import Carousel from '@/components/general/Carousel.vue'
 import DealsOfDay from '@/components/general/DealsOfDay.vue'
 import BrowseClothes from '@/components/general/BrowseClothes.vue'
@@ -62,6 +64,7 @@ export default {
     DealsOfDay,
     BrowseClothes,
     SlideShow,
+    Footer
   },
   computed: {
     ...mapState('home', [
